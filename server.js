@@ -29,7 +29,10 @@ const server = http.createServer(app);
 // Socket.io setup
 const io = new Server(server, {
   cors: {
-    origin: process.env.ALLOWED_ORIGINS || "*",
+    origin: [
+      "http://localhost:3000",
+      "https://uzairports-ai.netlify.app/" // (Agar kerak bo‘lsa)
+    ],
     methods: ["GET", "POST"],
     credentials: true
   }

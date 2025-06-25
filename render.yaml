@@ -15,6 +15,3 @@
            sync: false
          - key: PORT
            value: 10000" > render.yaml
-   git add render.yaml
-   git commit -m "add render.yaml for render.com config"
-   git push

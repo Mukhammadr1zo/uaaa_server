@@ -33,7 +33,7 @@ const io = new Server(server, {
       "http://localhost:3000",
       "https://uzairports-ai.netlify.app/" // (Agar kerak bo‘lsa)
     ],
-    ethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization", "Origin", "Accept"]
   }
@@ -44,8 +44,13 @@ feedbackController.setSocket(io);
 
 // Middleware
 app.use(cors({
-  origin: process.env.ALLOWED_ORIGINS || "*",
-  credentials: true
+  origin: [
+      "http://localhost:3000",
+      "https://uzairports-ai.netlify.app/" // (Agar kerak bo‘lsa)
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization", "Origin", "Accept"]
 }));
 app.use(helmet());
 app.use(morgan('dev'));

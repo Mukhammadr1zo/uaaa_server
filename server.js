@@ -33,8 +33,9 @@ const io = new Server(server, {
       "http://localhost:3000",
       "https://uzairports-ai.netlify.app/" // (Agar kerak bo‘lsa)
     ],
-    methods: ["GET", "POST"],
-    credentials: true
+    ethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization", "Origin", "Accept"]
   }
 });
 

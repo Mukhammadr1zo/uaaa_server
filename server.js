@@ -104,7 +104,7 @@ mongoose.connect(process.env.MONGO_URI)
     initializeAdmin();
     
     // Start server
-    const PORT = process.env.PORT || 5000;
+    const PORT = process.env.PORT || 10000;
     server.listen(PORT, () => {
       logger.info(`Server running on port ${PORT} with Socket.IO support`);
     });

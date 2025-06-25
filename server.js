@@ -31,7 +31,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:3000",
-      "https://uzairports-ai.netlify.app/" // (Agar kerak bo‘lsa)
+      "https://uzairports-ai.netlify.app" // (Agar kerak bo‘lsa)
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
@@ -46,7 +46,7 @@ feedbackController.setSocket(io);
 app.use(cors({
   origin: [
       "http://localhost:3000",
-      "https://uzairports-ai.netlify.app/" // (Agar kerak bo‘lsa)
+      "https://uzairports-ai.netlify.app" // (Agar kerak bo‘lsa)
     ],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,

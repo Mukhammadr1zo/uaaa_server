@@ -96,7 +96,7 @@ if (process.env.NODE_ENV === 'production') {
 app.use(errorHandler);
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect("mongodb+srv://baxtiyorovmuhammadrizo:PhvCchGjThHYyy7V@uaaa.a50jgij.mongodb.net/?retryWrites=true&w=majority&appName=uaaa")
   .then(() => {
     logger.info('MongoDB connected');
     
